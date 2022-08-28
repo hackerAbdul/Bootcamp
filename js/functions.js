@@ -590,18 +590,19 @@ function cs2SubmitForm(){
     var course = $( "#cs2Course" ).val();
 
     $.ajax({
+		headers: {
+			"Access-Control-Allow-Origin":"*"
+		},
         type: "POST",
-        url: "./php/cs2-process.php",
-        data: "cs2Name=" + name + "&cs2Email=" + email + "&cs2Course=" + course,
-        success : function(text){
-            if ( text == "success" ){
-                cs2Success();
-            } else {
-                cs2Error();
-                cs2SubmitMSG( false, text );
-            }
-        }
+        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfOuDWoooGBRF9MVhpzL5UWRUlXfisqWywh7ytUnw1EryAQMA/formResponse",
+        data: {
+			"entry.1045781291": email,
+			"entry.2005620554": name,
+			"entry.1427505686": course
+		},
+		dataType: "jsonp",
     });
+	cs2Success();
 }
 
 function cs2Success(){var i=csNotifications.data("success-msg"),n=i||"Thank you for your submission :)";$("#form-cta-subscribe-2")[0].reset(),cs2SubmitMSG(!0,'<i class="cs-success-icon fa fa-check"></i>'+n),$(".cs-notifications-content").addClass("sent"),csNotifications.css("opacity",0),csNotifications.slideDown(300).animate({opacity:1},300).delay(5e3).slideUp(400),$("#form-cta-subscribe-2").hasClass("redirected")&&setTimeout(function(){window.location.href="thank-you-page.html"},3e3)}function cs2Error(){csNotifications.css("opacity",0),csNotifications.slideDown(300).animate({opacity:1},300),$(".cs-notifications-content").removeClass("sent")}function cs2SubmitMSG(i,n){var s;s="shake animated",csNotifications.delay(300).addClass(s).one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){$(this).removeClass("shake bounce animated")}),csNotifications.children(".cs-notifications-content").html(n)}
