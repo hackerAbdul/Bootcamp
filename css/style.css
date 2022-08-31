@@ -62,6 +62,19 @@ body {
   font: 14px/1.7 "Open Sans", sans-serif;
   background: #fff;
   color: #999; }
+  
+  .video-text{
+    padding-right: 60px
+  }
+
+
+
+
+
+
+
+
+
 
 .font-heading-primary {
   font-family: "Montserrat", sans-serif; }
@@ -551,6 +564,25 @@ input[type="submit"].form-control:focus {
 
 .overlay-colored {
   z-index: 1; }
+
+
+
+  .teachers{
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+    list-style: none;
+  }
+  @media (max-width: 768px) {
+   
+  .teachers{
+    padding: 50px;
+  flex-direction: column;
+    list-style: none;
+  }
+  
+  }
+
 
 .overlay-pattern {
   z-index: 2;
@@ -1182,6 +1214,8 @@ input[type="submit"].form-control:focus {
   .social-icons.hover-white-bg li a i:last-child {
     color: #222; }
 
+
+   
 /*  [ 14 ] - Testimonial Single 1
 =================================== */
 .testimonial-single-1 {
@@ -1448,6 +1482,13 @@ input[type="submit"].form-control:focus {
   left: 0;
   top: 0;
   width: 100%; }
+
+.video{
+  position: relative;
+   padding-bottom: 64% ;
+   height: 0;
+   margin-top: 120px
+}
 
 .header-bar .container,
 .header-bar .row,
@@ -1751,6 +1792,12 @@ body::after {
     font-size: 21px; }
   .slide-content .description {
     font-size: 18px; } }
+    .video{
+      position: relative;
+       padding-bottom: 64% ;
+       height: 0;
+      margin-bottom: 120px;
+    }
 
 @media (max-width: 480px) {
   .slide-content .description {
