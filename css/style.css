@@ -565,7 +565,26 @@ input[type="submit"].form-control:focus {
 .overlay-colored {
   z-index: 1; }
 
+.card-group{
+  display:flex;
+  justify-content: space-between;
+  gap:20px;
+  
+  margin: 0 auto
+}
 
+
+.faq-wrapper{
+  padding: 80px 40px;
+
+}
+
+.question{
+  font-size: 24px;
+  font-weight: 500;
+  color:black;
+  padding: 10px 0px
+}
 
   .teachers{
     padding: 50px;
@@ -574,6 +593,20 @@ input[type="submit"].form-control:focus {
     list-style: none;
   }
   @media (max-width: 768px) {
+    .faq-wrapper{
+      padding: 80px 35px;
+    
+    }
+    
+    .card-group{
+      display:flex;
+      flex-direction: column;
+      padding: 10%;
+      justify-content: space-between;
+      gap:20px;
+      
+      margin: 0 auto
+    }
    
   .teachers{
     padding: 50px;
@@ -1387,14 +1420,15 @@ input[type="submit"].form-control:focus {
 /*  [ 17 ] - Scroll Top Icon
 ============================== */
 .scroll-top-icon {
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height:50px;
+  padding: 10px;
   line-height: 29px;
   text-align: center;
   color: #fff;
   font-size: 11px;
   border-radius: 2px;
-  background-color: #262626;
+  background-color: gray;
   position: fixed;
   bottom: -50px;
   right: 40px;
@@ -1564,7 +1598,8 @@ input[type="submit"].form-control:focus {
 #banner {
   position: relative;
   overflow: hidden;
-  background-color: #fff; }
+  opacity: 0.7;
+ }
   #banner.fullscreen .banner-parallax,
   #banner.fullscreen .banner-parallax .row > [class*="col-"] {
     min-height: auto; }
@@ -2378,6 +2413,8 @@ html.scroll-lock {
 
 /* Box Course */
 .box-course {
+  min-width: 300px !important;
+  max-height: 100% !important;
   top: 0;
   transition: all 0.2s; }
   .box-course .label-price,
