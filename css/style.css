@@ -566,9 +566,9 @@ input[type="submit"].form-control:focus {
   z-index: 1; }
 
 .card-group{
-  display:flex;
-  justify-content: space-between;
-  gap:20px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:50px;
   
   margin: 0 auto
 }
@@ -599,8 +599,7 @@ input[type="submit"].form-control:focus {
     }
     
     .card-group{
-      display:flex;
-      flex-direction: column;
+      grid-template-columns: 1fr;
       padding: 10%;
       justify-content: space-between;
       gap:20px;
